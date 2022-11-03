@@ -147,8 +147,7 @@ Output:
 */
 
 export function getLastItem(array) {
-    const lastItem = array.length - 1;
-    return array[lastItem];
+    return true;
 }
 
 // This function should take a dog object and return an <li> with the name of the dog
