@@ -7,6 +7,7 @@ import {
     divideThenMultiply,
     returnAsAnArray,
     returnAsAString,
+    makeLuckyGreeting,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -73,4 +74,12 @@ test('this test should return the numbers as a string', (expect) => {
     const actual = returnAsAString(8, 4, 5);
 
     expect.deepEqual(actual, expected, '845');
+});
+
+test('this test should take in 2 numbers to add them and put into a greeting message', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12.';
+
+    const actual = makeLuckyGreeting(8, 4);
+
+    expect.equal(actual, expected, 'Hello! Your lucky number for the day is 12.');
 });
