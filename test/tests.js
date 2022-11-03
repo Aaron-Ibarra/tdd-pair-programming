@@ -10,6 +10,7 @@ import {
     makeLuckyGreeting,
     getSecondItem,
     getLastItem,
+    renderDogLI,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -100,4 +101,12 @@ test('this test returns the last item of the array no matter the size', (expect)
     const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
 
     expect.deepEqual(actual, expected, 'plum');
+});
+
+test('this should take a dog object and return an <li> with the name of the dog', (expect) => {
+    const expected = '<li>Benny</li>';
+
+    const actual = renderDogLI({ name: 'Benny', age: 6 });
+
+    expect.deepEqual(actual, expected, '<li>Benny</li>');
 });
