@@ -4,6 +4,7 @@ import {
     multiplyBySeven,
     multiplyBy12ThenHalve,
     myFunction,
+    divideThenMultiply,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -33,11 +34,11 @@ test('this test should add three exclamation points to the argument', (expect) =
 });
 
 test('this test should multiply a number by 7', (expect) => {
-    const expected = 14;
+    const expected = 28;
 
-    const actual = multiplyBySeven(2);
+    const actual = multiplyBySeven(4);
 
-    expect.equal(actual, expected, 14);
+    expect.equal(actual, expected, 28);
 });
 
 test('this test should multiply a number by 12 and then halve the result', (expect) => {
@@ -46,4 +47,12 @@ test('this test should multiply a number by 12 and then halve the result', (expe
     const actual = multiplyBy12ThenHalve(4);
 
     expect.equal(actual, expected, 24);
+});
+
+test('this test should take in three numbers, divide the first by the second, then multiply the result ny th third', (expect) => {
+    const expected = 10;
+
+    const actual = divideThenMultiply(8, 4, 5);
+
+    expect.equal(actual, expected, 10);
 });
