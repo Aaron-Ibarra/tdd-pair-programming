@@ -6,6 +6,7 @@ import {
     myFunction,
     divideThenMultiply,
     returnAsAnArray,
+    returnAsAString,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -64,4 +65,12 @@ test('this test should take in three numbers and returned as an array', (expect)
     const actual = returnAsAnArray(8, 4, 5);
 
     expect.deepEqual(actual, expected, [8, 4, 5]);
+});
+
+test('this test should return the numbers as a string', (expect) => {
+    const expected = '845';
+
+    const actual = returnAsAString(8, 4, 5);
+
+    expect.deepEqual(actual, expected, '845');
 });
