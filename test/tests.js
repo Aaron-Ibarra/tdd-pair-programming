@@ -9,6 +9,7 @@ import {
     returnAsAString,
     makeLuckyGreeting,
     getSecondItem,
+    renderDogLI,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -93,5 +94,15 @@ test('this test should take an array and return the return the second item in th
 
     expect.deepEqual(actual, expected, 'apple');
 
+
+});
+
+test('this should take a dog object and return an <li> with the name of the dog', (expect) => {
+
+    const expected = '<li>Benny</li>';
+
+    const actual = renderDogLI({ name: 'Benny', age: 6 });
+
+    expect.deepEqual(actual, expected, '<li>Benny</li>');
 
 });
