@@ -8,6 +8,7 @@ import {
     returnAsAnArray,
     returnAsAString,
     makeLuckyGreeting,
+    getSecondItem,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -82,4 +83,15 @@ test('this test should take in 2 numbers to add them and put into a greeting mes
     const actual = makeLuckyGreeting(8, 4);
 
     expect.equal(actual, expected, 'Hello! Your lucky number for the day is 12.');
+});
+
+test('this test should take an array and return the return the second item in the array', (expect) => {
+
+    const expected = 'apple';
+
+    const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'apple');
+
+
 });
