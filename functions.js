@@ -64,7 +64,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return (firstNumber / secondNumber * thirdNumber);
+    return (firstNumber / secondNumber) * thirdNumber;
 }
 
 // This function should take in three numbers and return those numbers in an array
@@ -80,7 +80,7 @@ Output:
 */
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return [firstNumber, secondNumber, thirdNumber];
 }
 
 // This function should take in three numbers and return those numbers mushed together as a string
