@@ -9,6 +9,7 @@ import {
     returnAsAString,
     makeLuckyGreeting,
     getSecondItem,
+    getLastItem,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -91,4 +92,12 @@ test('this test should take an array and return the return the second item in th
     const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
 
     expect.deepEqual(actual, expected, 'apple');
+});
+
+test('this test returns the last item of the array no matter the size', (expect) => {
+    const expected = 'plum';
+
+    const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'plum');
 });
