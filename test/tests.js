@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { myFunction } from '../functions.js';
+import { addExclamationPoints, myFunction } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -17,4 +17,12 @@ skip('this test should be skipped', (expect) => {
     const actual = true;
 
     expect.equal(actual, expected);
+});
+
+test('this test should add three exclamation points to the argument', (expect) => {
+    const expected = 'hello!!!';
+
+    const actual = addExclamationPoints('hello');
+
+    expect.equal(actual, expected, 'hello!!!');
 });
