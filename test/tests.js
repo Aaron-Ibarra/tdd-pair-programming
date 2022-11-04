@@ -57,6 +57,18 @@ test('this test should multiply a number by 7', (expect) => {
     const actual = multiplyBySeven(4);
 
     expect.equal(actual, expected, 28);
+
+    const expected2 = 14;
+
+    const actual2 = multiplyBySeven(2);
+
+    expect.equal(actual2, expected2, 14);
+
+    const expected3 = 70;
+
+    const actual3 = multiplyBySeven(10);
+
+    expect.equal(actual3, expected3, 70);
 });
 
 test('this test should multiply a number by 12 and then halve the result', (expect) => {
@@ -65,6 +77,18 @@ test('this test should multiply a number by 12 and then halve the result', (expe
     const actual = multiplyBy12ThenHalve(4);
 
     expect.equal(actual, expected, 24);
+
+    const expected2 = 60;
+
+    const actual2 = multiplyBy12ThenHalve(10);
+
+    expect.equal(actual2, expected2, 60);
+
+    const expected3 = 150;
+
+    const actual3 = multiplyBy12ThenHalve(25);
+
+    expect.equal(actual3, expected3, 150);
 });
 
 test('this test should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
@@ -93,6 +117,20 @@ test('this test should take in three numbers and returned as an array', (expect)
     const actual = returnAsAnArray(8, 4, 5);
 
     expect.deepEqual(actual, expected, [8, 4, 5]);
+
+    const expected2 = [5, 6, 7];
+
+    const actual2 = returnAsAnArray(5, 6, 7);
+
+    expect.deepEqual(actual2, expected2, [5, 6, 7]);
+
+    const expected3 = [6, 7, 8];
+
+    const actual3 = returnAsAnArray(6, 7, 8);
+
+    expect.deepEqual(actual3, expected3, [6, 7, 8]);
+
+
 });
 
 test('this test should return the numbers as a string', (expect) => {
@@ -101,6 +139,19 @@ test('this test should return the numbers as a string', (expect) => {
     const actual = returnAsAString(8, 4, 5);
 
     expect.deepEqual(actual, expected, '845');
+
+    const expected2 = '123';
+
+    const actual2 = returnAsAString(1, 2, 3);
+
+    expect.deepEqual(actual2, expected2, '123');
+
+    const expected3 = '456';
+
+    const actual3 = returnAsAString(4, 5, 6);
+
+    expect.deepEqual(actual3, expected3, '456');
+
 });
 
 test('this test should take in 2 numbers to add them and put into a greeting message', (expect) => {
@@ -109,6 +160,20 @@ test('this test should take in 2 numbers to add them and put into a greeting mes
     const actual = makeLuckyGreeting(8, 4);
 
     expect.equal(actual, expected, 'Hello! Your lucky number for the day is 12.');
+
+    const expected2 = 'Hello! Your lucky number for the day is 13.';
+
+    const actual2 = makeLuckyGreeting(6, 7);
+
+    expect.equal(actual2, expected2, 'Hello! Your lucky number for the day is 13.');
+
+    const expected3 = 'Hello! Your lucky number for the day is 3.';
+
+    const actual3 = makeLuckyGreeting(1, 2);
+
+    expect.equal(actual3, expected3, 'Hello! Your lucky number for the day is 3.');
+
+
 });
 
 test('this test should take an array and return the return the second item in the array', (expect) => {
