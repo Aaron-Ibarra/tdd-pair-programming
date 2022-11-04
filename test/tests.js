@@ -37,6 +37,18 @@ test('this test should add three exclamation points to the argument', (expect) =
     const actual = addExclamationPoints('hello');
 
     expect.equal(actual, expected, 'hello!!!');
+
+    const expected2 = 'SODA!!!';
+
+    const actual2 = addExclamationPoints('SODA');
+
+    expect.equal(actual2, expected2, 'SODA!!!');
+
+    const expected3 = 'goodbye!!!';
+
+    const actual3 = addExclamationPoints('goodbye');
+
+    expect.equal(actual3, expected3, 'goodbye!!!');
 });
 
 test('this test should multiply a number by 7', (expect) => {
@@ -55,12 +67,24 @@ test('this test should multiply a number by 12 and then halve the result', (expe
     expect.equal(actual, expected, 24);
 });
 
-test('this test should take in three numbers, divide the first by the second, then multiply the result ny th third', (expect) => {
+test('this test should take in three numbers, divide the first by the second, then multiply the result by the third', (expect) => {
     const expected = 10;
 
     const actual = divideThenMultiply(8, 4, 5);
 
     expect.equal(actual, expected, 10);
+
+    const expected2 = 8;
+
+    const actual2 = divideThenMultiply(16, 4, 2);
+
+    expect.equal(actual2, expected2, 8);
+
+    const expected3 = 24;
+
+    const actual3 = divideThenMultiply(40, 5, 3);
+
+    expect.equal(actual3, expected3, 24);
 });
 
 test('this test should take in three numbers and returned as an array', (expect) => {
@@ -93,6 +117,18 @@ test('this test should take an array and return the return the second item in th
     const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
 
     expect.deepEqual(actual, expected, 'apple');
+
+    const expected2 = 'luigi';
+
+    const actual2 = getSecondItem(['mario', 'luigi', 'peach', 'bowser']);
+
+    expect.deepEqual(actual2, expected2, 'luigi');
+
+    const expected3 = 'blue';
+
+    const actual3 = getSecondItem(['red', 'blue', 'orange', 'green']);
+
+    expect.deepEqual(actual3, expected3, 'blue');
 });
 
 test('this test returns the last item of the array no matter the size', (expect) => {
@@ -101,12 +137,36 @@ test('this test returns the last item of the array no matter the size', (expect)
     const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
 
     expect.deepEqual(actual, expected, 'plum');
+
+    const expected2 = 'peach';
+
+    const actual2 = getLastItem(['kiwi', 'apple', 'orange', 'plum', 'peach']);
+
+    expect.deepEqual(actual2, expected2, 'peach');
+
+    const expected3 = 'mango';
+
+    const actual3 = getLastItem(['kiwi', 'apple', 'orange', 'plum', 'peach', 'banana', 'mango']);
+
+    expect.deepEqual(actual3, expected3, 'mango');
 });
 
-test('this should take a dog object and return an <li> with the name of the dog', (expect) => {
+test('this should take a pet object and return an <li> with the name of the pet', (expect) => {
     const expected = '<li>Benny</li>';
 
     const actual = renderDogLI({ name: 'Benny', age: 6 });
 
     expect.deepEqual(actual, expected, '<li>Benny</li>');
+
+    const expected2 = '<li>Pharah</li>';
+
+    const actual2 = renderDogLI({ name: 'Pharah', age: 4 });
+
+    expect.deepEqual(actual2, expected2, '<li>Pharah</li>');
+
+    const expected3 = '<li>Nandi</li>';
+
+    const actual3 = renderDogLI({ name: 'Nandi', age: 3 });
+
+    expect.deepEqual(actual3, expected3, '<li>Nandi</li>');
 });
